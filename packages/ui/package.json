@@ -1,5 +1,5 @@
 {
-  "name": "@repo/ui",
+  "name": "@monoux/ui",
   "version": "0.0.0",
   "sideEffects": [
     "**/*.css"
@@ -19,16 +19,16 @@
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^18.3.1"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/tailwind-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "@types/react": "^18.2.61",
-    "autoprefixer": "^10.4.18",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "@monoux/eslint-config": "workspace:*",
+    "@monoux/tailwind-config": "workspace:*",
+    "@monoux/typescript-config": "workspace:*",
+    "@types/react": "^18.3.3",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.3"
   }
 }

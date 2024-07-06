@@ -1,5 +1,10 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
+  "extends": "@monoux/typescript-config/react-library.json",
   "include": ["."],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "rootDir": "./src"
+  },
   "exclude": ["dist", "build", "node_modules"]
 }

@@ -1,4 +1,5 @@
 {
+  "name": "monoux",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -15,7 +16,6 @@
   },
   "packageManager": "pnpm@9.4.0",
   "engines": {
-    "node": ">=18"
-  },
-  "name": "with-tailwind"
+    "node": ">=20"
+  }
 }
