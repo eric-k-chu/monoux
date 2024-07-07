@@ -39,5 +39,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/consistent-type-imports': 'off',
+    'no-console': 'off',
   },
 }

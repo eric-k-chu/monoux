@@ -1,14 +1,13 @@
 {
-  "extends": "@monoux/typescript-config/react-library.json",
+  "extends": "@monoux/typescript-config/base.json",
   "include": ["src", ".eslintrc.cjs"],
   "compilerOptions": {
     "allowImportingTsExtensions": false,
     "moduleResolution": "node",
-    "composite": true,
     "declaration": true,
     "declarationMap": true,
+    "composite": true,
     "noEmit": false,
-    "outDir": "./dist",
     "rootDir": "./src"
   },
   "exclude": ["dist", "build", "node_modules"]
