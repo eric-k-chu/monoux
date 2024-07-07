@@ -1,22 +1,16 @@
 {
-  "name": "@monoux/scripts",
+  "name": "@monoux/common",
+  "private": true,
   "scripts": {
     "lint": "eslint src/",
     "test": "vitest run",
     "test:watch": "vitest --watch",
-    "type-check": "tsc --noEmit",
-    "add:app": "tsx ./src/app.ts",
-    "add:package": "tsx ./src/package.ts"
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@monoux/eslint-config": "workspace:*",
     "@monoux/typescript-config": "workspace:*",
-    "@types/node": "20.14.10",
-    "tsx": "4.16.2",
     "typescript": "^5.5.3",
     "vitest": "1.6.0"
-  },
-  "dependencies": {
-    "enquirer": "^2.4.1"
   }
 }

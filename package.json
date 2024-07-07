@@ -7,7 +7,9 @@
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "clean": "turbo clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "add:package": "pnpm --filter @monoux/scripts add:package",
+    "add:app": "pnpm --filter @monoux/scripts add:app"
   },
   "devDependencies": {
     "prettier": "^3.3.2",

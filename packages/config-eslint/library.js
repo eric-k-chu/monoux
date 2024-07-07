@@ -1,4 +1,4 @@
-const { resolve } = require('node:path')
+import { resolve } from 'node:path'
 
 const project = resolve(process.cwd(), 'tsconfig.json')
 
@@ -34,11 +34,29 @@ module.exports = {
   },
   ignorePatterns: ['node_modules/', 'dist/'],
   rules: {
-    'import/no-default-export': 'off',
-    semi: 'off',
-    '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/consistent-type-imports': ['off'],
+    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-throw-literal': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/consistent-type-imports': 'off',
-    'no-console': 'off',
+    '@typescript-eslint/semi': 'off',
+    'import/order': 'off',
+    'no-else-return': 'off',
+    'prefer-template': 'off',
+    semi: 'off',
+    'unicorn/filename-case': [
+      'error',
+      {
+        cases: {
+          camelCase: true,
+          pascalCase: true,
+        },
+      },
+    ],
   },
 }
