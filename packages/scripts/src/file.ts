@@ -1,5 +1,7 @@
+import { capitalize } from '@monoux/common'
 import { existsSync } from 'node:fs'
 import { mkdir, writeFile } from 'node:fs/promises'
+import { oraPromise } from 'ora'
 
 type Packages = 'apps' | 'packages'
 
@@ -11,15 +13,15 @@ export function validateDuplicate(type: Packages, name: string): boolean {
 export async function createDir(type: Packages, name: string): Promise<void> {
   const path = `../../${type}/${name}`
 
+  process.stdout.write('\n')
+
   await observe({
-    onStart: `Creating directory...`,
-    onEnd: `Directory created.`,
+    name: `${name} ${type}`,
     fn: mkdir(path),
   })
 
   await observe({
-    onStart: `Creating package.json...`,
-    onEnd: `package.json created.`,
+    name: 'package.json',
     fn: writeFile(
       `${path}/package.json`,
       toJsonString({
@@ -42,8 +44,7 @@ export async function createDir(type: Packages, name: string): Promise<void> {
   })
 
   await observe({
-    onStart: `Creating tsconfig.json...`,
-    onEnd: `tsconfig.json created.`,
+    name: 'tsconfig.json',
     fn: writeFile(
       `${path}/tsconfig.json`,
       toJsonString({
@@ -64,30 +65,27 @@ export async function createDir(type: Packages, name: string): Promise<void> {
   })
 
   await observe({
-    onStart: `Creating .eslintrc.cjs...`,
-    onEnd: `.eslintrc.cjs created.`,
+    name: '.eslintrc.cjs',
     fn: writeFile(
       `${path}/.eslintrc.cjs`,
-      `/** @type {import("eslint").Linter.Config} */
-        module.exports = {
-          root: true,
-          parser: '@typescript-eslint/parser',
-          extends: ['@monoux/eslint-config/library.js'],
-          rules: {
-            'import/no-cycle': 'off',
-          },
-          env: {
-            browser: true,
-            es6: true,
-            node: true,
-          },
-        }`
+      `/** @type {import("eslint").Linter.Config} */\n module.exports = ${toJsonString({
+        root: true,
+        parser: '@typescript-eslint/parser',
+        extends: ['@monoux/eslint-config/library.js'],
+        rules: {
+          'import/no-cycle': 'off',
+        },
+        env: {
+          browser: true,
+          es6: true,
+          node: true,
+        },
+      })}`
     ),
   })
 
   await observe({
-    onStart: `Creating src directory...`,
-    onEnd: `src directory created.`,
+    name: 'src',
     fn: mkdir(`${path}/src`),
   })
 
@@ -96,16 +94,15 @@ export async function createDir(type: Packages, name: string): Promise<void> {
 }
 
 type ObserveInput<T> = {
-  onStart: string
-  onEnd: string
+  name: string
   fn: Promise<T>
 }
 
-async function observe<T>({ onStart, onEnd, fn }: ObserveInput<T>): Promise<T> {
-  console.log(`> ${onStart}`)
-  const res = await fn
-  console.log(`> ${onEnd}`)
-  return res
+async function observe<T>({ name, fn }: ObserveInput<T>): Promise<T> {
+  const successText = `${capitalize(name)} created.`
+  const failText = `Failed to create ${name}.`
+  const text = `Creating ${name}...`
+  return oraPromise(fn, { successText, failText, text })
 }
 
 function toJsonString(obj: Record<string, unknown>): string {
