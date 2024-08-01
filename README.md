@@ -25,3 +25,7 @@ For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js
 ```
 
 If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `ui` package.
+
+TODO:
+
+* codegen with ejs or plop
