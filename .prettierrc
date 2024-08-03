@@ -4,6 +4,7 @@
   "tabWidth": 2,
   "singleQuote": true,
   "jsxSingleQuote": true,
+  "vueIndentScriptAndStyle": true,
   "printWidth": 100,
   "plugins": ["prettier-plugin-tailwindcss"]
 }

@@ -1,38 +1,21 @@
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
-import AutoImport from 'unplugin-auto-import/vite'
-import { defineConfig } from 'vitest/config'
 
-// See https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    vue(),
-    // See https://github.com/unplugin/unplugin-auto-import
-    AutoImport({
-      imports: ['vue'],
-      dts: './src/auto-imports.d.ts',
-      eslintrc: {
-        enabled: true,
-        filepath: resolve(__dirname, '.eslintrc-auto-import.json'),
-      },
-    }),
-  ],
+// https://vitejs.dev/config/
+export default defineConfig(async () => ({
+  plugins: [vue()],
+
+  // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
+  //
+  // 1. prevent vite from obscuring rust errors
   clearScreen: false,
-  envPrefix: ['VITE_', 'TAURI_'],
+  // 2. tauri expects a fixed port, fail if that port is not available
   server: {
     port: 1420,
     strictPort: true,
+    watch: {
+      // 3. tell vite to ignore watching `src-tauri`
+      ignored: ['**/src-tauri/**'],
+    },
   },
-  build: {
-    outDir: './dist',
-    // See https://tauri.app/v1/references/webview-versions for details
-    target: process.env.TAURI_PLATFORM == 'windows' ? 'chrome105' : 'safari15',
-    minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
-    sourcemap: !!process.env.TAURI_DEBUG,
-    emptyOutDir: true,
-  },
-  // See https://vitest.dev/config/
-  test: {
-    include: ['tests/unit/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-  },
-})
+}))
