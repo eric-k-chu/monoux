@@ -1,4 +1,2 @@
-export * from './add'
-export * from './string'
-export * from './sudoku'
-export * from './timers'
+export * from './api'
+export * from './util'

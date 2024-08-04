@@ -4,7 +4,9 @@
   "cmpilerOptions": {
     "lib": ["esnext", "dom"],
     "paths": {
-      "@monoux/common": ["../../packages/common/src"]
+      "@monoux/common": ["../../packages/common/src"],
+      "@core": ["./src/core"],
+      "@model": ["./src/model"]
     }
   },
   "references": [
