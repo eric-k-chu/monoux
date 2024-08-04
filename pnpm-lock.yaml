@@ -39,6 +39,9 @@ importers:
       '@tauri-apps/cli':
         specifier: ^1.6.0
         version: 1.6.0
+      '@types/node':
+        specifier: ^22.1.0
+        version: 22.1.0
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -92,8 +95,8 @@ importers:
         specifier: ^14.2.3
         version: 14.2.3
       '@types/node':
-        specifier: ^20.14.10
-        version: 20.14.10
+        specifier: ^22.1.0
+        version: 22.1.0
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -114,7 +117,7 @@ importers:
         version: 5.5.3
       vitest:
         specifier: 1.6.0
-        version: 1.6.0(@types/node@20.14.10)
+        version: 1.6.0(@types/node@22.1.0)
 
   apps/vuewer:
     dependencies:
@@ -140,6 +143,9 @@ importers:
       '@tauri-apps/cli':
         specifier: ^1.6.0
         version: 1.6.0
+      '@types/node':
+        specifier: ^22.1.0
+        version: 22.1.0
       '@vitejs/plugin-vue':
         specifier: ^5.1.2
         version: 5.1.2(vite@5.3.5(@types/node@22.1.0))(vue@3.4.35(typescript@5.5.4))
@@ -4162,7 +4168,6 @@ snapshots:
   '@types/node@22.1.0':
     dependencies:
       undici-types: 6.13.0
-    optional: true
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -6606,8 +6611,7 @@ snapshots:
 
   undici-types@5.26.5: {}
 
-  undici-types@6.13.0:
-    optional: true
+  undici-types@6.13.0: {}
 
   untildify@4.0.0: {}
 
