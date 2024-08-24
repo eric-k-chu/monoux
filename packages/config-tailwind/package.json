@@ -8,5 +8,6 @@
   "devDependencies": {
     "@monoux/typescript-config": "workspace:*",
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "sideEffects": false
 }

@@ -8,11 +8,7 @@
     "declarationMap": true,
     "composite": true,
     "noEmit": false,
-    "rootDir": "./src",
-    "paths": {
-      "@monoux/common": ["../common/src"]
-    }
+    "rootDir": "./src"
   },
-  "exclude": ["dist", "build", "node_modules"],
-  "references": [{ "path": "../common" }]
+  "exclude": ["dist", "build", "node_modules"]
 }
