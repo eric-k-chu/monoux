@@ -1,4 +1,4 @@
-import { prompt } from 'enquirer'
+import * as enquirer from 'enquirer'
 import { createDir, validateDuplicate } from './file'
 import { run } from './run'
 
@@ -8,7 +8,7 @@ type PromptResponse = {
 }
 
 async function addPackage(): Promise<void> {
-  const response = await prompt<PromptResponse>([
+  const response = await enquirer.prompt<PromptResponse>([
     {
       type: 'select',
       name: 'type',
