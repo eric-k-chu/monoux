@@ -21,7 +21,6 @@ const cli = meow(
     flags: {
       name: {
         type: 'string',
-        default: 'default lol',
       },
       num: {
         type: 'number',
