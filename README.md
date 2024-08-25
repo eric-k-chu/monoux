@@ -28,4 +28,4 @@ If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer`
 
 TODO:
 
-* codegen with ejs or plop
+- codegen with ejs or plop
