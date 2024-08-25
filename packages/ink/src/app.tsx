@@ -2,10 +2,10 @@ import { Text } from 'ink'
 import React from 'react'
 
 type Props = {
-  name: string | undefined
+  name: string
 }
 
-export default function App({ name = 'Stranger' }: Props): React.ReactElement {
+export default function App({ name }: Props): React.ReactElement {
   return (
     <Text>
       Hello, <Text color='green'>{name}</Text>
