@@ -1,6 +1,7 @@
-import { prompt } from 'enquirer'
+import Enquirer from 'enquirer'
 import { validateDuplicate } from './file'
 import { run } from './run'
+const { prompt } = Enquirer
 
 type PromptResponse = {
   type: 'frontend' | 'backend'
