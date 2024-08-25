@@ -9,8 +9,8 @@
     "type-check": "turbo type-check",
     "clean": "turbo clean",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "add:package": "pnpm --filter @monoux/scripts add:package",
-    "add:app": "pnpm --filter @monoux/scripts add:app"
+    "add:package": "pnpm --filter @monoux/gen add:package",
+    "add:app": "pnpm --filter @monoux/gen add:app"
   },
   "devDependencies": {
     "prettier": "^3.3.3",

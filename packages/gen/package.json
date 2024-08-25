@@ -1,5 +1,5 @@
 {
-  "name": "@monoux/scripts",
+  "name": "@monoux/gen",
   "scripts": {
     "lint": "eslint src/",
     "test": "vitest run",

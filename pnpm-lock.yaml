@@ -163,7 +163,7 @@ importers:
 
   packages/config-typescript: {}
 
-  packages/scripts:
+  packages/gen:
     dependencies:
       '@monoux/common':
         specifier: workspace:*
