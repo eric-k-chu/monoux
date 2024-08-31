@@ -4,6 +4,7 @@
   "compilerOptions": {
     "allowImportingTsExtensions": false,
     "moduleResolution": "node",
+    "types": ["node"],
     "composite": true,
     "declaration": true,
     "declarationMap": true,
