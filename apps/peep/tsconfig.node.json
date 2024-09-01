@@ -1,4 +1,0 @@
-{
-  "extends": "@monoux/typescript-config/react.node.json",
-  "include": ["src"]
-}

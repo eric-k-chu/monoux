@@ -1,6 +1,6 @@
 # Monoux
 
-Monorepo for UX/UI apps
+Monorepo for UX/UI apps. Also testing out monorepos and sharing tsconfigs across apps/packages.
 
 ### Building packages/ui
 
