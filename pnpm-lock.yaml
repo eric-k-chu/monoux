@@ -156,24 +156,24 @@ importers:
 
   packages/eslint:
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.9.1
+        version: 9.9.1
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.3.0
         version: 8.3.0(@typescript-eslint/parser@8.3.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4))(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
       '@typescript-eslint/parser':
         specifier: ^8.3.0
         version: 8.3.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
-      eslint:
-        specifier: ^9.9.1
-        version: 9.9.1(jiti@1.21.6)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.9.1(jiti@1.21.6))
       eslint-config-turbo:
         specifier: ^2.1.1
         version: 2.1.1(eslint@9.9.1(jiti@1.21.6))
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
+      typescript-eslint:
+        specifier: ^8.0.1
+        version: 8.3.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
 
   packages/gen:
     dependencies:
@@ -986,10 +986,6 @@ packages:
     resolution: {integrity: sha512-JJF8SZErmgKCGkt124WUmTt0sQ5YLvPo2YxDsfzn9avGJC7/BQIa+3FZoDb3zeYYsZx91pZ6htQAJaKK8NQQAg==}
     peerDependencies:
       eslint: '>6.6.0'
-
-  eslint-plugin-only-warn@1.1.0:
-    resolution: {integrity: sha512-2tktqUAT+Q3hCAU0iSf4xAN1k9zOpjK5WO8104mB0rT/dGhOa09582HN5HlbxNbPRZ0THV7nLGvzugcNOSjzfA==}
-    engines: {node: '>=6'}
 
   eslint-plugin-turbo@2.1.1:
     resolution: {integrity: sha512-E/34kdQd0n3RP18+e0DSV0f3YTSCOojUh1p4X0Xrho2PBYmJ3umSnNo9FhkZt6UDACl+nBQcYTFkRHMz76lJdw==}
@@ -2633,8 +2629,6 @@ snapshots:
     dependencies:
       eslint: 9.9.1(jiti@1.21.6)
       eslint-plugin-turbo: 2.1.1(eslint@9.9.1(jiti@1.21.6))
-
-  eslint-plugin-only-warn@1.1.0: {}
 
   eslint-plugin-turbo@2.1.1(eslint@9.9.1(jiti@1.21.6)):
     dependencies:
