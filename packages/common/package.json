@@ -1,13 +1,13 @@
 {
   "name": "@monoux/common",
   "scripts": {
-    "lint": "eslint src/",
+    "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest --watch",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@monoux/eslint-config": "workspace:*",
+    "@monoux/eslint": "workspace:*",
     "@monoux/typescript-config": "workspace:*",
     "@types/node": "22.1.0",
     "typescript": "^5.5.3",

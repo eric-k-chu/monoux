@@ -1,15 +1,12 @@
 {
   "name": "@monoux/gen",
   "scripts": {
-    "lint": "eslint src/",
     "test": "vitest run",
     "test:watch": "vitest --watch",
-    "type-check": "tsc --noEmit",
     "add:app": "tsx ./src/app.ts",
     "add:package": "tsx ./src/package.ts"
   },
   "devDependencies": {
-    "@monoux/eslint-config": "workspace:*",
     "@monoux/typescript-config": "workspace:*",
     "@types/node": "20.14.10",
     "tsx": "4.16.2",
