@@ -1,10 +1,10 @@
 {
   "name": "@monoux/gen",
-  "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest --watch",
-    "add:app": "tsx ./src/app.ts",
-    "add:package": "tsx ./src/package.ts"
+  "dependencies": {
+    "@monoux/common": "workspace:*",
+    "enquirer": "^2.4.1",
+    "ora": "^8.0.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.5.2",
@@ -12,11 +12,11 @@
     "typescript": "^5.5.3",
     "vitest": "1.6.0"
   },
-  "dependencies": {
-    "@monoux/common": "workspace:*",
-    "enquirer": "^2.4.1",
-    "ora": "^8.0.1",
-    "zod": "^3.23.8"
+  "scripts": {
+    "add:app": "tsx ./src/app.ts",
+    "add:package": "tsx ./src/package.ts",
+    "test": "vitest run",
+    "test:watch": "vitest --watch"
   },
   "sideEffects": false,
   "type": "module"

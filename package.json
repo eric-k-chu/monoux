@@ -1,17 +1,5 @@
 {
   "name": "monoux",
-  "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "test": "turbo test",
-    "clean": "turbo clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "add:package": "pnpm --filter @monoux/gen add:package",
-    "add:app": "pnpm --filter @monoux/gen add:app",
-    "prepare": "husky"
-  },
   "devDependencies": {
     "husky": "^9.1.5",
     "prettier": "^3.3.3",
@@ -19,8 +7,20 @@
     "syncpack": "^13.0.0",
     "turbo": "^2.1.1"
   },
-  "packageManager": "pnpm@9.9.0",
   "engines": {
     "node": ">=20"
+  },
+  "packageManager": "pnpm@9.9.0",
+  "private": true,
+  "scripts": {
+    "add:app": "pnpm --filter @monoux/gen add:app",
+    "add:package": "pnpm --filter @monoux/gen add:package",
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "dev": "turbo dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo lint",
+    "prepare": "husky",
+    "test": "turbo test"
   }
 }
