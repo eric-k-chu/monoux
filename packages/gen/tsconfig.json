@@ -1,9 +1,0 @@
-{
-  "include": ["src", ".eslintrc.cjs"],
-  "compilerOptions": {
-    "composite": true,
-    "noEmit": false,
-    "outDir": "./build"
-  },
-  "exclude": ["dist", "build", "node_modules"]
-}
