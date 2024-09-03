@@ -36,9 +36,9 @@ importers:
       '@monoux/eslint':
         specifier: workspace:*
         version: link:../../packages/eslint
-      '@monoux/typescript':
+      '@monoux/tsconfig':
         specifier: workspace:*
-        version: link:../../packages/typescript
+        version: link:../../packages/tsconfig
       '@types/express':
         specifier: ^4.17.21
         version: 4.17.21
@@ -201,7 +201,7 @@ importers:
         specifier: ^8.0.1
         version: 8.4.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
 
-  packages/typescript: {}
+  packages/tsconfig: {}
 
 packages:
 

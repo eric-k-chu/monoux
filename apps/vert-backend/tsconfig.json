@@ -1,5 +1,5 @@
 {
-  "extends": "@monoux/typescript/node.json",
+  "extends": "@monoux/tsconfig/node.json",
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true
