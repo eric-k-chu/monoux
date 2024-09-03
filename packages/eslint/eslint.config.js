@@ -4,10 +4,12 @@ import tsParser from '@typescript-eslint/parser'
 import tseslint from 'typescript-eslint'
 
 export default [
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    files: ['*.js?(x)', '*.ts?(x)'],
+    files: ['**/*.ts', '**/*.tsx'],
     plugins: {
-      '@typescript-eslint': tsPlugin,
+      '@typescript-eslint/eslint-plugin': tsPlugin,
     },
     rules: {
       '@typescript-eslint/explicit-function-return-type': 'error',
@@ -17,6 +19,4 @@ export default [
     },
     ignores: ['**/*.config.(js|ts|cjs|mjs)'],
   },
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
 ]
