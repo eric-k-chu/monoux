@@ -16,5 +16,6 @@
     "eslint.config.js"
   ],
   "main": "eslint.config.js",
-  "type": "module"
+  "type": "module",
+  "sideEffects": false
 }

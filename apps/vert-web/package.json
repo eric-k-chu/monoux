@@ -22,9 +22,8 @@
   },
   "scripts": {
     "build": "tsc -b && vite build",
-    "dev": "vite",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "vert:dev": "vite",
+    "lint": "eslint ."
   },
   "type": "module"
 }

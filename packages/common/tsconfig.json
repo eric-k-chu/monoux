@@ -5,7 +5,8 @@
     "moduleResolution": "node",
     "composite": true,
     "noEmit": false,
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "strict": true
   },
   "exclude": ["dist", "build", "node_modules"]
 }

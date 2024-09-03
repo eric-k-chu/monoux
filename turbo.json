@@ -16,6 +16,9 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "vert:dev": {
+      "dependsOn": ["^vert:dev"]
+    },
     "test": {},
     "test:watch": {
       "cache": false,
