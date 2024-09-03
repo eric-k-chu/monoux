@@ -17,6 +17,8 @@ export default [
     languageOptions: {
       parser: tsParser,
     },
-    ignores: ['**/*.config.(js|ts|cjs|mjs)'],
   },
+  {
+    ignores: ['**/*.config.(js|ts|cjs|mjs)', '**/*.d.ts', '**/node_modules/**','**/dist/**', '**/build/**',],
+  }
 ]
