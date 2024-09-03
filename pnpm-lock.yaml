@@ -39,9 +39,6 @@ importers:
       '@monoux/eslint':
         specifier: workspace:*
         version: link:../../packages/eslint
-      '@monoux/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config-typescript
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.4
@@ -78,9 +75,6 @@ importers:
       '@monoux/eslint':
         specifier: workspace:*
         version: link:../eslint
-      '@monoux/typescript-config':
-        specifier: workspace:*
-        version: link:../config-typescript
       '@types/node':
         specifier: 22.1.0
         version: 22.1.0
@@ -155,8 +149,6 @@ importers:
         specifier: ^5.4.1
         version: 5.4.2(@types/node@22.5.2)(terser@5.31.6)
 
-  packages/config-typescript: {}
-
   packages/eslint:
     devDependencies:
       '@eslint/js':
@@ -193,9 +185,6 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@monoux/typescript-config':
-        specifier: workspace:*
-        version: link:../config-typescript
       '@types/node':
         specifier: 20.14.10
         version: 20.14.10

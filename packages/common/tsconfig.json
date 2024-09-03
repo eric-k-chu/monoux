@@ -1,11 +1,8 @@
 {
-  "extends": "@monoux/typescript-config/base.json",
-  "include": ["src", ".eslintrc.cjs"],
+  "include": ["src"],
   "compilerOptions": {
     "allowImportingTsExtensions": false,
     "moduleResolution": "node",
-    "declaration": true,
-    "declarationMap": true,
     "composite": true,
     "noEmit": false,
     "rootDir": "./src"
