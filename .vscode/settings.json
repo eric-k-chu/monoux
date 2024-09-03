@@ -1,3 +1,4 @@
+/** ESLint extension must be set to pre-release version */
 {
   "eslint.workingDirectories": [
     {
@@ -6,5 +7,7 @@
   ],
   "files.associations": {
     "*.css": "tailwindcss"
-  }
+  },
+  "eslint.useFlatConfig": true,
+  "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html"]
 }
