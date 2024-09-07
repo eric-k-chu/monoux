@@ -1,7 +1,9 @@
 {
-  "name": "@monoux/postgres",
+  "name": "@monoux/crud",
   "version": "0.0.0",
   "dependencies": {
+    "@monoux/common": "workspace:*",
+    "@supabase/supabase-js": "^2.45.3",
     "pg": "^8.12.0"
   },
   "devDependencies": {
