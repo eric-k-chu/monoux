@@ -1,13 +1,20 @@
 /** ESLint extension must be set to pre-release version */
 {
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ],
+  "editor.defaultFormatter": "biomejs.biome",
+  // "eslint.probe": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   "typescript",
+  //   "typescriptreact",
+  //   "html"
+  // ],
+  // "eslint.useFlatConfig": true,
+  // "eslint.workingDirectories": [
+  //   {
+  //     "mode": "auto"
+  //   }
+  // ],
   "files.associations": {
     "*.css": "tailwindcss"
-  },
-  "eslint.useFlatConfig": true,
-  "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html"]
+  }
 }

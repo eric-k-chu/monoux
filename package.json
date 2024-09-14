@@ -1,6 +1,7 @@
 {
   "name": "monoux",
   "devDependencies": {
+    "@biomejs/biome": "1.9.0",
     "husky": "^9.1.5",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
