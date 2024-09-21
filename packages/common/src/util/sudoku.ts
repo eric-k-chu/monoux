@@ -1,6 +1,6 @@
 const NUMBER_OF_CELLS = 81
 
-export function isValidSudoku(board: string[][]): boolean {
+export function isSudokuSolved(board: string[][]): boolean {
   const rows = new Map<number, Set<number>>()
   const columns = new Map<number, Set<number>>()
   const boxes = new Map<number, Set<number>>()

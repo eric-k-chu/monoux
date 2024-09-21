@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { isValidSudoku } from './sudoku'
+import { isSudokuSolved } from './sudoku'
 
-describe('isValidSudoku', () => {
-  it('invalid board', () => {
+describe('isSudokuSolved', () => {
+  it('not a solution', () => {
     const board = [
       ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
       ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
@@ -14,6 +14,21 @@ describe('isValidSudoku', () => {
       ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
       ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
     ]
-    expect(isValidSudoku(board)).toBe(false)
+    expect(isSudokuSolved(board)).toBe(false)
+  })
+
+  it('solved board', () => {
+    const board = [
+      ['5', '3', '4', '6', '7', '8', '9', '1', '2'],
+      ['6', '7', '2', '1', '9', '5', '3', '4', '8'],
+      ['1', '9', '8', '3', '4', '2', '5', '6', '7'],
+      ['8', '5', '9', '7', '6', '1', '4', '2', '3'],
+      ['4', '2', '6', '8', '5', '3', '7', '9', '1'],
+      ['7', '1', '3', '9', '2', '4', '8', '5', '6'],
+      ['9', '6', '1', '5', '3', '7', '2', '8', '4'],
+      ['2', '8', '7', '4', '1', '9', '6', '3', '5'],
+      ['3', '4', '5', '2', '8', '6', '1', '7', '9'],
+    ]
+    expect(isSudokuSolved(board)).toBe(true)
   })
 })
