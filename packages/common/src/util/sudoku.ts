@@ -11,7 +11,7 @@ export function isValidSudoku(board: string[][]): boolean {
     const box = Math.floor(row / 3) * 3 + Math.floor(column / 3)
     const cell = Number(board[row][column])
 
-    if (isNaN(cell)) return false
+    if (Number.isNaN(cell)) return false
 
     if (!rows.has(row)) rows.set(row, new Set<number>())
     if (!columns.has(column)) columns.set(column, new Set<number>())
