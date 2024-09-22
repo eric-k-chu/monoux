@@ -1,3 +1,3 @@
-export function wait<T>(value: T, ms: number): Promise<T> {
-  return new Promise<T>((resolve) => setTimeout(() => resolve(value), ms))
+export function wait<T>(ms: number, cb: T): Promise<T> {
+  return new Promise<T>((resolve) => setTimeout(() => resolve(cb), ms))
 }
