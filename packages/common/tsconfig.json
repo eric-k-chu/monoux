@@ -1,12 +1,11 @@
 {
-  "include": ["src"],
   "compilerOptions": {
     "allowImportingTsExtensions": false,
     "moduleResolution": "node",
     "composite": true,
     "noEmit": false,
     "rootDir": "./src",
-    "strict": true
-  },
-  "exclude": ["dist", "build", "node_modules"]
+    "strict": true,
+    "types": ["node"]
+  }
 }

@@ -1,17 +1,17 @@
 {
   "name": "monoux",
   "devDependencies": {
-    "@biomejs/biome": "1.9.0",
-    "husky": "^9.1.5",
+    "@biomejs/biome": "1.9.2",
+    "husky": "^9.1.6",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "syncpack": "^13.0.0",
-    "turbo": "^2.1.1"
+    "turbo": "^2.1.2"
   },
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.11.0",
   "private": true,
   "scripts": {
     "add:app": "pnpm --filter @monoux/gen add:app",
