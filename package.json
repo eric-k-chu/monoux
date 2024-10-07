@@ -2,9 +2,6 @@
   "name": "monoux",
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
-    "husky": "^9.1.6",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8",
     "syncpack": "^13.0.0",
     "turbo": "^2.1.3"
   },
@@ -19,9 +16,8 @@
     "build": "turbo build",
     "clean": "turbo clean",
     "dev": "turbo dev",
-    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "format": "biome --write \"**/*.{ts,tsx}\"",
     "lint": "turbo lint",
-    "prepare": "husky",
     "test": "turbo test",
     "vert:dev": "turbo vert:dev"
   }
