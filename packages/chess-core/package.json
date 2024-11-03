@@ -1,6 +1,9 @@
 {
   "name": "@chess/core",
   "type": "module",
+  "dependencies": {
+    "elysia": "latest"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "typescript": "^5.6.3"

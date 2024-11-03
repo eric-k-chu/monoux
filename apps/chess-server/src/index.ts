@@ -1,6 +1,5 @@
-import { Elysia } from 'elysia'
-import { start } from './classic/start'
+import { chessApp } from '@chess/core'
 
-const app = new Elysia().use(start).listen(3000)
-
-console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`)
+chessApp.listen(3000, (s) => {
+  console.log(`Elysia is running at ${s.hostname}:${s.port}`)
+})

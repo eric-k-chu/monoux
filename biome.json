@@ -48,7 +48,8 @@
       "a11y": {
         "useFocusableInteractive": "off",
         "useMediaCaption": "off",
-        "useSemanticElements": "off"
+        "useSemanticElements": "off",
+        "useKeyWithClickEvents": "off"
       },
       "style": {
         "useNodejsImportProtocol": {

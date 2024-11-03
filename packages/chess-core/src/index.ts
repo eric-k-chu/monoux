@@ -1,3 +1,3 @@
-export * from './piece'
-export * from './mapping'
-export * from './board'
+export * from './lib'
+export * from './maps'
+export * from './api'

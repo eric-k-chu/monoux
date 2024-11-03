@@ -12,3 +12,7 @@ export const STARTING_BOARD: Cell[][] = [
   ['wp', 'wp', 'wp', 'wp', 'wp', 'wp', 'wp', 'wp'],
   ['wr', 'wh', 'wb', 'wq', 'wk', 'wb', 'wh', 'wr'],
 ]
+
+export function isCellEmpty(cell: Cell): cell is '' {
+  return cell === ''
+}
