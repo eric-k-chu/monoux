@@ -1,4 +1,4 @@
-import { type Cell, STARTING_BOARD } from '@chess/core'
+import { CLASSIC_STARTER, type Cell, type Piece } from '@chess/core'
 import { createSignal } from 'solid-js'
 import { type ChessApiState, useChessApi } from './use-chess-api'
 
@@ -13,19 +13,31 @@ type ChessWebSocket = ReturnType<ChessApiState['classic']['subscribe']>
 
 export function useClassic(): ClassicState {
   const api = useChessApi()
-  const [board, setBoard] = createSignal(STARTING_BOARD)
+  const [board, setBoard] = createSignal(CLASSIC_STARTER)
   let ws: ChessWebSocket | undefined
 
-  const move = (board: Cell[][]) => {
+  const move = (piece: Piece, from: number, to: number) => {
     if (!ws) return
-    ws.send({ board: JSON.stringify(board) })
+
+    const updatedBoard = board()
+    updatedBoard[from][to] = piece
+    setBoard(updatedBoard)
+
+    ws.send({
+      gameId: 'game1',
+      userId: 'user1',
+      from,
+      to,
+      piece,,
+      board: updatedBoard,
+    })
   }
 
   const connect = () => {
     if (ws) ws.close()
     ws = api.classic.subscribe()
     ws.on('message', ({ data }) => {
-      setBoard(JSON.parse(data.board) as Cell[][])
+      setBoard(data.board)
     })
   }
 
