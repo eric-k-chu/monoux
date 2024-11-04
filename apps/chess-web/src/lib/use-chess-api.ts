@@ -1,4 +1,4 @@
-import type { ChessApp } from '@chess/core'
+import type { ChessApp } from '@chess/api'
 import { treaty } from '@elysiajs/eden'
 
 export type ChessApiState = ReturnType<typeof treaty<ChessApp>>
