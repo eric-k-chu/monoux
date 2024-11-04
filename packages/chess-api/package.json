@@ -1,9 +1,12 @@
 {
-  "name": "chess-server",
+  "name": "@chess/api",
   "version": "0.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts"
   },
   "dependencies": {
     "@chess/core": "workspace:*",
