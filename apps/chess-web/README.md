@@ -1,3 +1,0 @@
-# volid
-
-Vite + Solid

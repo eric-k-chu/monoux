@@ -1,3 +1,0 @@
-# chess-server
-
-Elysia + Bun

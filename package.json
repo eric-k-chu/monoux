@@ -1,10 +1,9 @@
 {
-  "name": "templates",
+  "name": "monoux",
   "private": true,
   "scripts": {
     "list-mismatches": "syncpack list-mismatches",
-    "fix-mismatches": "syncpack fix-mismatches",
-    "dev:chess": "turbo run dev --filter=\"chess-*\""
+    "fix-mismatches": "syncpack fix-mismatches"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
