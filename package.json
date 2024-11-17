@@ -1,0 +1,8 @@
+{
+  "name": "monoux",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.6.3"
+  }
+}
