@@ -1,9 +1,16 @@
 {
   "name": "monoux",
   "type": "module",
+  "scripts": {
+    "make": "bun --filter '*' make",
+    "clean": "bun --filter '*' clean",
+    "mismatch:list": "bun run syncpack list-mismatches",
+    "mismatch:fix": "bun run syncpack fix-mismatches"
+  },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/bun": "latest",
-    "typescript": "^5.6.3"
-  }
+    "syncpack": "^13.0.0"
+  },
+  "packageManager": "bun@1.1.34",
+  "workspaces": ["packages/*", "apps/*"]
 }

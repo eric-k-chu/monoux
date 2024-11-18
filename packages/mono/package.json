@@ -1,0 +1,13 @@
+{
+  "name": "@monoux/mono",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "^1.1.13",
+    "@types/jest": "^29.5.14",
+    "typescript": "^5.6.3"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0"
+  }
+}
