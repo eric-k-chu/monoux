@@ -5,7 +5,9 @@
     "make": "bun --filter '*' make",
     "clean": "bun --filter '*' clean",
     "mismatch:list": "bun run syncpack list-mismatches",
-    "mismatch:fix": "bun run syncpack fix-mismatches"
+    "mismatch:fix": "bun run syncpack fix-mismatches",
+    "add:pkg": "bun ./packages/internal/src/package.ts",
+    "add:app": "bun ./packages/internal/src/app.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

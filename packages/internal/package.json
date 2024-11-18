@@ -1,0 +1,19 @@
+{
+  "name": "@monoux/internal",
+  "type": "module",
+  "scripts": {
+    "pkg": "bun ./src/package.ts",
+    "app": "bun ./src/app.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.13",
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
+    "@monoux/core": "workspace:*",
+    "zod": "^3.23.8"
+  }
+}
